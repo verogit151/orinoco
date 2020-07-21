@@ -1,0 +1,356 @@
+/*Responsive design : breakpoints*/
+$breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px);
+
+@mixin xsmall-only {
+	@media screen and (max-width: map-get($breakpoints, sm)) {
+		@content;
+	}
+}
+@mixin medium {
+	@media screen and (max-width: map-get($breakpoints, md)) {
+		@content;
+	}
+}
+@mixin large {
+	@media screen and (min-width: map-get($breakpoints, md)) {
+		@content;
+	}
+}
+@mixin x-large {
+	@media screen and (min-width: map-get($breakpoints, lg)) {
+		@content;
+	}
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@font-face {
+    font-family: 'galada';
+    src: url('../css/fonts/Galada/Galada-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'josefin';
+    src: url('../css/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$violet : #552244;
+$rose : #a17b8c;
+$marron : #a38d79;
+$grisclair : #ebebeb;
+$grisfonce : #4f4f50;
+
+* {
+    font-family: 'josefin', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    outline: none;
+    margin : 0;
+}
+.valid {
+    border-color: green !important;
+    box-shadow: 0 0 2px 1px green !important;
+}
+.invalid {
+    border-color: red !important;
+    box-shadow: 0 0 2px 1px red !important;
+}
+
+.text-primary {
+    color: $marron !important;
+  }
+.navbar {
+    background-color: $violet; 
+}
+.navbar-brand {
+    font-family: 'galada', Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+.fa-camera-retro, .fa-user, .fa-shopping-cart {
+    color: $grisfonce;
+}
+.fa-camera-retro:hover, .fa-user:hover, .fa-shopping-cart:hover {
+    color: $grisclair;
+}
+.active.fa-inverse, .active.d-lg-none, .fa-camera-retro:focus, .fa-user:focus, .fa-shopping-cart:focus {
+    color: #fff !important;
+}
+.compteur {
+    background-color: $rose;
+    color: #fff;
+    font-size: 0.8rem;
+    position: absolute;
+    text-align: center;
+    padding-top: 0.25rem;
+    margin-left: 2rem;
+    margin-top: -0.3rem;
+    border-radius: 50%;
+    width: 25px ;
+    height: 25px;
+}
+.ml-auto {
+    margin-left: auto;
+}
+.banner {
+    @include xsmall-only {
+        padding-top: 6rem;
+        padding-bottom: 1rem;
+        height: 300px;
+	}
+    padding-top: 18rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    color: #fff;
+    background-image: url("../images/bg-header.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+div.banner__subtitle {
+    @include xsmall-only {
+        font-size: 1.2rem;
+    }
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+div.banner__title {
+    @include xsmall-only {
+        font-size: 2.2rem;
+    }
+    font-family: 'galada';
+    font-size: 5rem;
+}
+
+.products {
+    background-color: $grisclair;
+    width: 100%;
+    padding: 5% 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: 1rem solid $rose;
+}
+.products a {
+    text-decoration: none;
+    color: $grisfonce;
+}
+.products a:hover, .products a:focus {
+    color: $violet;
+}
+h1 {
+    @include xsmall-only {
+        font-size: 2rem;
+    }
+    font-family: 'galada';
+    color: $grisfonce;
+    font-size: 3rem;
+}
+h2 {
+    color: $grisfonce;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.card {
+    height: 100%;
+}
+div.card-price {
+    color: $grisfonce;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.products .name-control, .email-control {
+    border-radius: 0.5rem;
+}
+.card__image {
+    padding: 0.5rem;
+}
+.camera {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.price {
+    font-size: 1.4rem;
+}
+
+#camera__image img{
+    @include medium {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+    @include large {
+        max-width: 300px;
+    }
+    @include x-large {
+        max-width: 450px;
+    }
+    padding: 0.5rem;
+    border: 0.5px solid $violet;
+}
+#camera__info h1 {
+    font-size: 2.5rem;
+}
+.services.fas.fa-stack {
+    color: $marron;
+}
+.breadcrumb-item, .breadcrumb-item > a {
+    color: $grisfonce !important;
+}
+.lenses {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px $marron solid;
+}
+input[type="submit"] {
+    background-color: $marron;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px $grisfonce solid;
+}
+table {
+    @include xsmall-only {
+        font-size: 0.8rem;
+    }
+    font-size: 1rem;
+}
+#account {
+    display: flex;
+    margin-left: auto;
+}
+
+.order, .account {
+    margin-top: 10%;
+    margin-bottom: 3%;
+}
+#start {
+    margin : 2% auto 3% auto;
+}
+
+.order__title, .account__title {
+    @include medium {
+        font-size: 0.8rem;
+        line-height: 55px;
+    }
+    padding: 0 10px;
+    line-height: 48px;
+    height: 48px;
+    border-radius: 0.5rem;
+    background-color: $grisclair;
+    color: $grisfonce;
+    text-transform: uppercase;
+    font-family: 'josefin';
+    font-size: 1.8rem;
+}
+.order__subtitle, .account__subtitle {
+    color: $grisfonce;
+    font-size: 24px;
+    font-family: 'galada';
+    text-align: left;
+}
+.del {
+    color: #212529;
+}
+.del:focus, .del:hover {
+    color: $rose;
+}
+.button {
+    margin-bottom: 5%;
+}
+.account .row {
+    margin-bottom: 2%;
+}
+.account label {
+    margin-bottom: 0;
+}
+#checkPanier__list tr td {
+    vertical-align : middle;
+}
+#checkPanier__list img {
+    max-width: 100px;
+}
+.orderThx, .message {
+    @include xsmall-only {
+        font-size: 1rem;
+	}
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 6%;
+}
+
+.btn {
+    background-color: $violet;
+    color: #fff;
+}
+.btn-social {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 100%;
+}
+section.services {
+    padding: 5% 0;
+    border-bottom: 2rem solid $violet;
+}
+h2.services__title {
+    @include xsmall-only {
+        font-size: 2rem;
+    }
+    font-family : 'galada';
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+.footer-banner {
+    @include large {
+        background-image: url("../images/bg-footer.jpg");
+    }
+    background-color: $marron;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    border-top: 0.75rem solid $rose;
+    &__col {
+        padding: 3%;
+        margin: 5% 1rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        font-size: 12px;
+        & li {
+            list-style: none;
+        }
+    }
+}
+h6 {
+    font-family: 'galada';
+    color: $grisfonce;
+}
+.footer-legal {
+    @include medium {
+        height: 100px;
+        font-size: 0.6em;
+    }
+    height: 50px;
+    background-color: $grisclair;
+    color: $grisfonce;
+    font-size: 0.7em;
+}
+.footer-legal a {
+    text-decoration: none;
+    color: $grisfonce;
+}
+a.btn.btn-social {
+    color: $grisclair;
+}
+a.btn.btn-social:hover {
+    color: #fff;
+}

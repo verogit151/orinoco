@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <!-- Font Awesome pour les icones -->
+    <link href="css/fontawesome/fontawesome.css" rel="stylesheet">
+    <link href="css/fontawesome/brands.css" rel="stylesheet">
+    <link href="css/fontawesome/solid.css" rel="stylesheet">
+    <script defer src="js/fontawesome/all.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Panier</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" width="40" alt="Logo Oricam">Oricam</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                               <a class="nav-link" href="index.html" title="Les caméras vintage">
+                                    <span class="fa-stack d-none d-lg-block">
+                                        <i class="fas fa-camera-retro fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    <span class="d-lg-none">Les caméras vintage</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" title="Votre compte">
+                                    <span class="fa-stack d-none d-lg-block">
+                                        <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    <span class="d-lg-none">Votre compte</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="panier.html" title="Votre panier">
+                                    <span class="compteur d-none d-lg-block"></span> 
+                                    <span class="fa-stack d-none d-lg-block">
+                                        <i class="fas fa-shopping-cart active fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    <span class="d-lg-none fa-inverse active">Votre panier</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col order">
+                    <h1 class="order__title">Récapitulatif de votre commande</h1>   
+                    <h2 class="order__subtitle">Votre panier</h2>
+                    <div id="checkPanier" class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Produit</th>
+                                    <th scope="col">Nom</th>
+                                    <th scope="col">Prix</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="checkPanier__list">    
+                            
+                            </tbody>
+                        </table>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="row button">
+                <div class="col-6">
+                    <input type="submit" id="continue" value="Continuer mes achats">
+                </div>
+                <div class="col-6">
+                    <input type="submit" id="account" value="S'identifier">
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <!-- Footer-->
+    <footer>
+        <div class="footer-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-11 col-md-3 footer-banner__col">
+                        <h6>L'e-shop</h6>
+                        <ul>
+                            <li>Livraison</li>
+                            <li>Paiement</li>
+                            <li>Conditions générales de vente</li>
+                        </ul>
+                    </div>
+                    <div class="col-11 col-md-3 footer-banner__col">
+                        <h6>Contacts</h6>
+                        <ul>
+                            <li>Service client</li>
+                            <li>Nous contacter</li>
+                        </ul>
+                    </div>
+                    <div class="col-11 col-md-4 footer-banner__col">
+                        <h6>A propos</h6>
+                        <ul>
+                            <li>Oricam, une société de Oricono</li>
+                            <li>Presse</li>
+                            <li>Nos magasins</li>
+                        </ul>
+                        <img src="images/logo_orinoco.png" alt="Logo Orinoco"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-legal py-1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-4 text-md-left text-center">©Oricam 2020</div>
+                    <div class="col-12 col-md-4 my-md-0 my-2 text-center">
+                        <a class="btn btn-social mx-2" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-social mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-social mx-2" href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <div class="col-12 col-md-4 text-md-right text-center">
+                        <a class="mr-3" href="#">Mentions légales</a>
+                        <a href="#">Politique de confidentialité</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="fonctions.js"></script>
+    <script src="panier.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+</body>
+
+</html>
