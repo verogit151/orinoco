@@ -9939,8 +9939,12 @@ h3 {
   box-shadow: 0 0 2px 1px red !important;
 }
 
+a:focus {
+  border: 1px #4f4f50 solid;
+}
+
 .text-primary {
-  color: #a38d79 !important;
+  color: #563517 !important;
 }
 
 .navbar {
@@ -9965,7 +9969,7 @@ h3 {
 }
 
 .compteur {
-  background-color: #a17b8c;
+  background-color: #8d6b7a;
   color: #fff;
   font-size: 0.8rem;
   position: absolute;
@@ -10027,7 +10031,7 @@ div.banner__title {
   padding: 5% 15px;
   margin-right: auto;
   margin-left: auto;
-  border-bottom: 1rem solid #a17b8c;
+  border-bottom: 1rem solid #8d6b7a;
 }
 
 .products a {
@@ -10109,7 +10113,7 @@ div.card-price {
 }
 
 .services.fas.fa-stack {
-  color: #a38d79;
+  color: #563517;
 }
 
 .breadcrumb-item, .breadcrumb-item > a {
@@ -10119,15 +10123,18 @@ div.card-price {
 .lenses {
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
-  border: 1px #a38d79 solid;
+  border: 1px #563517 solid;
 }
 
 input[type=submit] {
-  background-color: #a38d79;
+  background-color: #563517;
   color: #fff;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   border: 1px #4f4f50 solid;
+}
+input[type=submit]:focus {
+  border-width: 2px;
 }
 
 table {
@@ -10183,7 +10190,7 @@ table {
 }
 
 .del:focus, .del:hover {
-  color: #a17b8c;
+  color: #8d6b7a;
 }
 
 .button {
@@ -10253,12 +10260,12 @@ h4 {
 }
 
 .footer-banner {
-  background-color: #a38d79;
+  background-color: #563517;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  border-top: 0.75rem solid #a17b8c;
+  border-top: 0.75rem solid #8d6b7a;
 }
 @media screen and (min-width: 768px) {
   .footer-banner {

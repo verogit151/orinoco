@@ -57,6 +57,7 @@ else {
         let aElt = document.createElement("a")
         aElt.href = "panier.html?del=" + cameraId
         aElt.className = "del"
+        aElt.setAttribute("aria-label", "suppression")
         let faElt = document.createElement("span")
         faElt.className = "fa-stack"
         let trashElt = document.createElement("i")
@@ -94,7 +95,7 @@ else {
         window.location.assign("account.html")
     })
 
-    // supprimer une produit
+    // supprimer un produit
     let idProduit = obtenirParametre("del")
     if (idProduit) {
         localStorage.removeItem(idProduit)

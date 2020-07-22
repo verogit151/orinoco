@@ -15,6 +15,7 @@ promiseGet("http://localhost:3000/api/cameras/").then(reponse => {
             let imgElt = document.createElement("img")
             imgElt.src = camera.imageUrl
             imgElt.className = "card-img-top card__image"
+            imgElt.alt = "Caméra vintage"
             let bodyElt = document.createElement("div")
             bodyElt.className = "card-body"
             let nameElt = document.createElement("h2")

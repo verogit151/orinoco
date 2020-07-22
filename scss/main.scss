@@ -37,11 +37,11 @@ $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px);
     font-style: normal;
 }
 
-$violet : #552244;
-$rose : #a17b8c;
-$marron : #a38d79;
-$grisclair : #ebebeb;
-$grisfonce : #4f4f50;
+$dark-bg : #552244;
+$border-bg : #8d6b7a; //#a17b8c;
+$accent : #563517; 
+$light-bg : #ebebeb;
+$dark-type : #4f4f50;
 
 * {
     font-family: 'josefin', Arial, Helvetica, sans-serif;
@@ -57,28 +57,31 @@ $grisfonce : #4f4f50;
     border-color: red !important;
     box-shadow: 0 0 2px 1px red !important;
 }
+a:focus {
+    border: 1px $dark-type solid;
+}
 
 .text-primary {
-    color: $marron !important;
+    color: $accent !important;
   }
 .navbar {
-    background-color: $violet; 
+    background-color: $dark-bg; 
 }
 .navbar-brand {
     font-family: 'galada', Arial, Helvetica, sans-serif;
     font-size: 28px;
 }
 .fa-camera-retro, .fa-user, .fa-shopping-cart {
-    color: $grisfonce;
+    color: $dark-type;
 }
 .fa-camera-retro:hover, .fa-user:hover, .fa-shopping-cart:hover {
-    color: $grisclair;
+    color: $light-bg;
 }
 .active.fa-inverse, .active.d-lg-none, .fa-camera-retro:focus, .fa-user:focus, .fa-shopping-cart:focus {
     color: #fff !important;
 }
 .compteur {
-    background-color: $rose;
+    background-color: $border-bg;
     color: #fff;
     font-size: 0.8rem;
     position: absolute;
@@ -125,30 +128,30 @@ div.banner__title {
 }
 
 .products {
-    background-color: $grisclair;
+    background-color: $light-bg;
     width: 100%;
     padding: 5% 15px;
     margin-right: auto;
     margin-left: auto;
-    border-bottom: 1rem solid $rose;
+    border-bottom: 1rem solid $border-bg;
 }
 .products a {
     text-decoration: none;
-    color: $grisfonce;
+    color: $dark-type;
 }
 .products a:hover, .products a:focus {
-    color: $violet;
+    color: $dark-bg;
 }
 h1 {
     @include xsmall-only {
         font-size: 2rem;
     }
     font-family: 'galada';
-    color: $grisfonce;
+    color: $dark-type;
     font-size: 3rem;
 }
 h2 {
-    color: $grisfonce;
+    color: $dark-type;
     font-size: 1.5rem;
     text-align: center;
 }
@@ -156,7 +159,7 @@ h2 {
     height: 100%;
 }
 div.card-price {
-    color: $grisfonce;
+    color: $dark-type;
     font-size: 1rem;
     text-align: center;
 }
@@ -187,28 +190,31 @@ div.card-price {
         max-width: 450px;
     }
     padding: 0.5rem;
-    border: 0.5px solid $violet;
+    border: 0.5px solid $dark-bg;
 }
 #camera__info h1 {
     font-size: 2.5rem;
 }
 .services.fas.fa-stack {
-    color: $marron;
+    color: $accent;
 }
 .breadcrumb-item, .breadcrumb-item > a {
-    color: $grisfonce !important;
+    color: $dark-type !important;
 }
 .lenses {
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
-    border: 1px $marron solid;
+    border: 1px $accent solid;
 }
 input[type="submit"] {
-    background-color: $marron;
+    background-color: $accent;
     color: #fff;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
-    border: 1px $grisfonce solid;
+    border: 1px $dark-type solid;
+    &:focus {
+        border-width: 2px;
+    }
 }
 table {
     @include xsmall-only {
@@ -238,14 +244,14 @@ table {
     line-height: 48px;
     height: 48px;
     border-radius: 0.5rem;
-    background-color: $grisclair;
-    color: $grisfonce;
+    background-color: $light-bg;
+    color: $dark-type;
     text-transform: uppercase;
     font-family: 'josefin';
     font-size: 1.8rem;
 }
 .order__subtitle, .account__subtitle {
-    color: $grisfonce;
+    color: $dark-type;
     font-size: 24px;
     font-family: 'galada';
     text-align: left;
@@ -254,7 +260,7 @@ table {
     color: #212529;
 }
 .del:focus, .del:hover {
-    color: $rose;
+    color: $border-bg;
 }
 .button {
     margin-bottom: 5%;
@@ -282,7 +288,7 @@ table {
 }
 
 .btn {
-    background-color: $violet;
+    background-color: $dark-bg;
     color: #fff;
 }
 .btn-social {
@@ -296,7 +302,7 @@ table {
 }
 section.services {
     padding: 5% 0;
-    border-bottom: 2rem solid $violet;
+    border-bottom: 2rem solid $dark-bg;
 }
 h2.services__title {
     @include xsmall-only {
@@ -313,12 +319,12 @@ h4 {
     @include large {
         background-image: url("../images/bg-footer.jpg");
     }
-    background-color: $marron;
+    background-color: $accent;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
-    border-top: 0.75rem solid $rose;
+    border-top: 0.75rem solid $border-bg;
     &__col {
         padding: 3%;
         margin: 5% 1rem;
@@ -332,7 +338,7 @@ h4 {
 }
 h6 {
     font-family: 'galada';
-    color: $grisfonce;
+    color: $dark-type;
 }
 .footer-legal {
     @include medium {
@@ -340,16 +346,16 @@ h6 {
         font-size: 0.6em;
     }
     height: 50px;
-    background-color: $grisclair;
-    color: $grisfonce;
+    background-color: $light-bg;
+    color: $dark-type;
     font-size: 0.7em;
 }
 .footer-legal a {
     text-decoration: none;
-    color: $grisfonce;
+    color: $dark-type;
 }
 a.btn.btn-social {
-    color: $grisclair;
+    color: $light-bg;
 }
 a.btn.btn-social:hover {
     color: #fff;
