@@ -10078,7 +10078,7 @@ div.card-price {
   padding: 0.5rem;
 }
 
-.camera {
+#camera {
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -10213,14 +10213,14 @@ table {
   max-width: 100px;
 }
 
-.orderThx, .message {
+.orderThx, .message, .error {
   font-size: 1.2rem;
   text-align: center;
   margin-top: 15%;
   margin-bottom: 6%;
 }
 @media screen and (max-width: 576px) {
-  .orderThx, .message {
+  .orderThx, .message, .error {
     font-size: 1rem;
   }
 }

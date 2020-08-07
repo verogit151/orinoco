@@ -1,16 +1,5 @@
 // Validation des champs du compte client
-// const nameInput = document.querySelector('.form-control')
-// nameInput.addEventListener('input', () => {
-//     nameInput.setCustomValidity('')
-//     nameInput.checkValidity()  
-// })
-// nameInput.addEventListener('invalid', () => {
-//     if(nameInput.value === '') {
-//         nameInput.setCustomValidity("Ce champ est obligatoire")
-//     } else {
-//         nameInput.setCustomValidity("Le format de ce champ est incorrect, veuillez réessayer")
-//     }
-// })
+
 // Nom
 const nameInput = document.querySelector('.form-control#name')
 nameInput.addEventListener('input', () => {
@@ -68,6 +57,9 @@ document.querySelector("form").addEventListener("submit", function(e) {
         promisePost(API_URL + "cameras/order", JSON.stringify(order)).then(reponse => {
             const obj = JSON.parse(reponse)
             window.location.assign("commande.html?orderId=" + obj.orderId)
+        })
+        .catch( error => {
+            alert('Une erreur est survenue. Veuillez réessayer ultérieurement.')
         })
     }
     else alert('Le formulaire est invalide.')

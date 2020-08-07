@@ -39,13 +39,12 @@ else compteur.style.visibility = "hidden"
 // Validation de la saisie du compte client
 // Nom, prénom et ville
 function validateTxt(fldTxt) {
-  let regex = /^[a-zA-Z]+[\- 'a-zA-Z]+$/
-  //return regex.match(fldTxt.value)
+  let regex = /^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ]+[\- 'a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ]+$/
   return fldTxt.value.match(regex)
 }
 // Adresse
 function validateAddress(fldTxt) {
-  let regex = /^[0-9A-Za-z]+[\- 'a-zA-Z0-9]+$/
+  let regex = /^[0-9A-Za-záàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ]+[\- ',a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ]+$/
   return regex.test(fldTxt.value)
 }
 // Email

@@ -1,7 +1,8 @@
 let produit = document.getElementsByClassName("produits")[0]
 // Accès à la page produit
 
-promiseGet("http://localhost:3000/api/cameras/").then(reponse => {
+promiseGet("http://localhost:3000/api/cameras/")
+.then(reponse => {
     let cameras = JSON.parse(reponse)
     produit.innerHTML = ""
     if (cameras.length > 0) {
@@ -35,6 +36,14 @@ promiseGet("http://localhost:3000/api/cameras/").then(reponse => {
         })
     } else {
         let msgElt = document.createElement("p")
+        msgElt.className = "error"
         msgElt.textContent = "Aucun produit disponible"
+        produit.appendChild(msgElt)
     }
+})
+.catch( error => {
+    let msgElt = document.createElement("p")
+    msgElt.className = "error"
+    msgElt.textContent = "Une erreur est survenue. Veuillez réessayer ultérieurement."
+    produit.appendChild(msgElt)
 })

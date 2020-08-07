@@ -3,6 +3,7 @@ let cameraId = obtenirParametre("id")
 console.log(cameraId)
 
 // Afficher les informations détaillées de la caméra
+let cameraPage = document.getElementById("camera")
 let camera__image = document.getElementById("camera__image")
 let camera__info = document.getElementById("camera__info")
 promiseGet("http://localhost:3000/api/cameras/" + cameraId).then(reponse => {
@@ -30,9 +31,19 @@ promiseGet("http://localhost:3000/api/cameras/" + cameraId).then(reponse => {
         camera__info.appendChild(descriptionElt)
         camera__info.appendChild(priceElt)
     } else {
+        cameraPage.innerHTML = ""
         let msgElt = document.createElement("p")
-        msgElt.textContent = "Aucune camera disponible"
+        msgElt.className = "error"
+        msgElt.textContent = "Camera indisponible"
+        cameraPage.appendChild(msgElt)
     }
+})
+.catch( error => {
+    cameraPage.innerHTML = ""
+    let msgElt = document.createElement("p")
+    msgElt.className = "error"
+    msgElt.textContent = "Une erreur est survenue. Veuillez réessayer ultérieurement."
+    cameraPage.appendChild(msgElt)
 })
 
 // Ajouter au panier

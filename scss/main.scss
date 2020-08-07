@@ -170,7 +170,7 @@ div.card-price {
 .card__image {
     padding: 0.5rem;
 }
-.camera {
+#camera {
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -277,7 +277,7 @@ table {
 #checkPanier__list img {
     max-width: 100px;
 }
-.orderThx, .message {
+.orderThx, .message, .error {
     @include xsmall-only {
         font-size: 1rem;
 	}
